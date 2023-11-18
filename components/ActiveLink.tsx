@@ -1,7 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { headers } from "next/headers";
 
 const style = {
   color: "#0070f3",
@@ -9,8 +7,10 @@ const style = {
 };
 
 export const ActiveLink = ({ href, text }: { href: string; text: string }) => {
-  const asPath = usePathname();
-
+  const headersList = headers();
+  // read the custom x-url header
+  const asPath = headersList.get("x-url") || "";
+  console.log("asPath", asPath, href);
   return (
     <Link style={asPath === href ? style : undefined} href={href}>
       {text}
