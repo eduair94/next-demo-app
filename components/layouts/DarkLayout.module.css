@@ -1,0 +1,15 @@
+.dark_div {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: auto;
+  position: relative;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.dark_div h3 {
+  position: absolute;
+  top: 10;
+  left: 10;
+}

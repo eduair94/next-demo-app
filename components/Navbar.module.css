@@ -1,0 +1,10 @@
+.nav {
+  display: flex;
+  gap: 24px;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
