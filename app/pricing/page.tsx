@@ -1,7 +1,8 @@
-import Link from "next/link";
-import { MainLayout } from "@/components/layouts/MainLayout";
+import Link from 'next/link'
+import { MainLayout } from '@/components/layouts/MainLayout'
+import { type ReactNode } from 'react'
 
-export default function Home() {
+export default function Home (): ReactNode {
   return (
     <MainLayout>
       <div className="center">
@@ -11,5 +12,5 @@ export default function Home() {
         </Link>
       </div>
     </MainLayout>
-  );
+  )
 }
