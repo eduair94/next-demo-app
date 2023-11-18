@@ -1,12 +1,12 @@
-import Link from "next/link";
-import { Navbar } from "../Navbar";
-import styles from "./MainLayout.module.css";
+import { Navbar } from '../Navbar'
+import styles from './MainLayout.module.css'
+import { type FC, type PropsWithChildren } from 'react'
 
-export const MainLayout = ({ children }: { children: React.ReactNode }) => {
+export const MainLayout: FC<PropsWithChildren> = ({ children }) => {
   return (
     <>
       <Navbar />
       <main className={styles.main}>{children}</main>
     </>
-  );
-};
+  )
+}

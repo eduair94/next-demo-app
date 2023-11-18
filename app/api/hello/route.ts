@@ -1,5 +1,11 @@
-import { NextRequest, NextResponse } from "next/server";
+import { type NextApiResponse } from 'next'
+import { type NextRequest, NextResponse } from 'next/server'
 
-export async function GET(req: NextRequest): Promise<NextResponse> {
-    return NextResponse.json({ message: 'Hello from Next.js!' }, {status: 200});
+interface Data {
+  message: string
+}
+
+export async function GET (req: NextRequest, res: NextApiResponse): Promise<NextResponse<Data>> {
+  const resp: Data = { message: 'Hello from Next.js!' }
+  return NextResponse.json(resp, { status: 200 })
 }
